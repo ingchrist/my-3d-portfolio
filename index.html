@@ -1,13 +1,730 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/images/fav.png" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Adrian &mdash;&mdash; Portfolio</title>
-  </head>
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.jsx"></script>
-  </body>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jagan Devspace | Portfolio</title>
+    <link rel="icon" href="Assets/jagan.jpg">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Arima:wght@100..700&family=Lobster&family=Pacifico&family=Playwrite+GB+S:ital,wght@0,100..400;1,100..400&family=Poppins:wght@300;400&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css"
+        integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css" />
+
+</head>
+
+<body>
+    <div id="Preloader"></div>
+    <header>
+        <div id="Portfolio"><a href="#about_head">Jagan Devspace</a></div>
+        <div class="navlist hide">
+            <nav class="hide">
+                <a class="about_hide navItem" href="#about_head">About</a>
+                <a class="note_head_hide navItem" href="#note_head">About</a>
+                <a href="#skills_head" class="navItem">Skills</a>
+                <a href="#education_head" class="navItem">Education</a>
+                <a href="#projects_head" class="navItem">Projects</a>
+                <a href="#Cerifications" class="navItem">Cerifications</a>
+                <a href="#contacts_headerline" class="navItem">Contacts</a>
+                <div class="theme">
+                    <a id="profile" href="https://github.com/JaganParida" target="_blank">Github Profile</a>
+                    <i title="Toggle to Change theme" class="bi bi-brightness-high-fill" id="toggleDark"></i>
+                </div>
+
+            </nav>
+
+        </div>
+        <div>
+        </div>
+        <div class="menuicon" onclick="myFunction(this)">
+            <div class="bar1"></div>
+            <div class="bar2"></div>
+            <div class="bar3"></div>
+        </div>
+    </header>
+
+    <section>
+        <h1 class="header" id="about_head"></h1>
+        <div class="page" id="page1">
+            <div id="home">
+                <div class="quote">
+                    <div class="name first">
+                        <h1>Hi, I am</h1>
+                        <h1>Jagan Parida</h1>
+                    </div>
+                    <div class="container first">
+                        <h2>I'm a<span class="auto-type"></span></h2>
+                    </div>
+                    <h1 id="note_head">About</h1>
+                    <div class="note first">
+                        <p>I am a 3rd-year B.Tech Computer Science student aspiring to become a MERN stack full-stack
+                            developer with a passion for
+                            Data Structures and Algorithms (DSA) in Java. I love building scalable web applications and
+                            continuously explore new
+                            technologies to enhance my front-end and back-end development skills. I thrive in
+                            problem-solving environments, applying
+                            my DSA knowledge to optimize Performance and efficiency.
+                        </p>
+                    </div>
+                    <div id="link">
+                        <div class="resume">
+                            <span class="check hire1"><a href="Assets/JaganParida_Resume.pdf"
+                                    target="_blank"><button>Check
+                                        Resume</button></a></span>
+                            <span class="check hire2"><a href="#contacts_headerline"><button>Hire Me</button></a></span>
+                        </div>
+                    </div>
+                </div>
+                <img class="second" src="Assets/jagan.jpg" alt="">
+            </div>
+        </div>
+        </div>
+
+        <h1 class="header" id="skills_head">Skills</h1>
+        <div class="page" id="page2">
+            <div class="skills-wrapper">
+                <div id="skill-list">
+                    <div class="webdev"><img src="Assets/html.png" alt="">HTML</div>
+                    <div class="webdev"><img src="Assets/css.png" alt="">CSS</div>
+                    <div class="webdev"><img src="Assets/js.png" alt="">Javascript</div>
+                    <div class="webdev"><img src="Assets/react.png" alt="">React Js</div>
+                    <div class="webdev"><img src="Assets/typescript.png" alt="">TypeScript</div>
+                    <div class="webdev"><img src="Assets/express.png" alt="">Express Js</div>
+                    <div class="webdev"><img src="Assets/nodejs.png" alt="">Node Js</div>
+                    <div class="webdev"><img src="Assets/c.png" alt="">C</div>
+                    <div class="webdev"><img src="Assets/java.png" alt="">Java</div>
+                    <div class="webdev"><img src="Assets/python.png" alt="">Python</div>
+                    <div class="webdev"><img src="Assets/bootstrap.png" alt="">Bootstrap</div>
+                    <div class="webdev"><img src="Assets/tailwindcss.png" alt="">Tailwind CSS</div>
+                    <div class="webdev"><img src="Assets/materialui.png" alt="">Material UI</div>
+                    <div class="webdev"><img src="Assets/uikit.png" alt="">UiKit</div>
+                    <div class="webdev"><img src="Assets/figma.png" alt="">Figma</div>
+                    <div class="webdev"><img src="Assets/sql.png" alt="">MySQL</div>
+                    <div class="webdev"><img src="Assets/mongodb.png" alt="">MongoDB</div>
+                    <div class="webdev"><img src="Assets/aws.png" alt="">AWS</div>
+                    <div class="webdev"><img src="Assets/RenderCloud.png" alt="">RenderCloud</div>
+                    <div class="webdev"><img src="Assets/googleCloud.png" alt="">Google Cloud</div>
+                </div>
+            </div>
+        </div>
+
+
+
+
+        <div class="proficiency-container">
+            <div class="proficiency">
+                <div class="skill-box">
+                    <span class="title">HTML</span>
+                    <div class="skill-bar">
+                        <span class="skill-per html first">
+                            <span class="tooltip">97%</span>
+                        </span>
+                    </div>
+                </div>
+                <div class="skill-box">
+                    <span class="title">CSS</span>
+                    <div class="skill-bar">
+                        <span class="skill-per css first">
+                            <span class="tooltip">95%</span>
+                        </span>
+                    </div>
+                </div>
+                <div class="skill-box">
+                    <span class="title">JavaScript</span>
+                    <div class="skill-bar">
+                        <span class="skill-per javascript first">
+                            <span class="tooltip">70%</span>
+                        </span>
+                    </div>
+                </div>
+                <div class="skill-box">
+                    <span class="title">MongoDB</span>
+                    <div class="skill-bar">
+                        <span class="skill-per mongodb first">
+                            <span class="tooltip">96%</span>
+                        </span>
+                    </div>
+                </div>
+                <div class="skill-box">
+                    <span class="title">SQL</span>
+                    <div class="skill-bar">
+                        <span class="skill-per sql first">
+                            <span class="tooltip">96%</span>
+                        </span>
+                    </div>
+                </div>
+                <div class="skill-box">
+                    <span class="title">NodeJS</span>
+                    <div class="skill-bar">
+                        <span class="skill-per nodejs first">
+                            <span class="tooltip">92%</span>
+                        </span>
+                    </div>
+                </div>
+                <div class="skill-box">
+                    <span class="title">ReactJS</span>
+                    <div class="skill-bar">
+                        <span class="skill-per reactjs first">
+                            <span class="tooltip">90%</span>
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <button onclick="topFunction()" id="myBtn" title="Go to top"><i class="fa-solid fa-arrow-up"></i></button>
+
+        <h1 class="header" id="education_head">Education</h1>
+        <div class="page" id="page3">
+            <section class="timeline-section">
+                <div class="timeline-items">
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-date"><i class="fas fa-graduation-cap"></i>
+                            2023 - 2027</div>
+                        <div class="timeline-content">
+                            <h3>Centurion University of Technology and Management, Bhubaneswar</h3>
+                            <p>I'm continuing my BTECH in Centurion University Bhubaneswar in CSE Grade: 9
+                                cgpa(Present)
+                            </p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-date"><i class="fas fa-graduation-cap"></i>
+                            2021 - 2023</div>
+                        <div class="timeline-content">
+                            <h3>Nist Higher Seconday School</h3>
+                            <p>I have completed my 12th from NIST Higher Secondary School in PCM Grade: 86.33%</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-date"><i class="fas fa-graduation-cap"></i>
+                            2019 - 2021</div>
+                        <div class="timeline-content">
+                            <h3>P.C High School</h3>
+                            <p>I have completed my secondary education from PC High School in HSE medium Graade:
+                                85.5%
+                            </p>
+                        </div>
+                    </div>
+            </section>
+        </div>
+
+        <h1 class="header" id="projects_head">Projects</h1>
+        <div class="page" id="page4">
+            <div id="filterButton">
+                <button class="btn active" onclick="filterSelection('all', event)">All</button>
+                <button class="btn" onclick="filterSelection('simple', event)">Simple</button>
+                <button class="btn" onclick="filterSelection('advanced', event)">Advanced</button>
+            </div>
+            <div id="project-list">
+                <div class="projects wonderLodge advanced second">
+                    <div class="img"><img src="Assets/wanderlodge-ui.png" alt=""></div>
+                    <div class="tech-detail">
+                        <div class="uses">
+                            <span>EJS</span><span>JS</span><span>CSS</span><span>Bootstrap</span><span>MongoDB</span><span>Express</span><span>Node.js</span>
+                        </div>
+                        <h3>Airbnb Clone</h3>
+                        <div class="time">Dec24-Jan25</div>
+                        <p>WanderLodge is an Airbnb-inspired full-stack web application for exploring, creating,
+                            reviewing,
+                            and managing lodging
+                            listings.it features Cloudinary for image storage and interactive Mapbox
+                            maps.</p>
+                        <div class="viewLink">
+                            <a href="https://github.com/JaganParida/WanderLodge" target="_blank"><button class="view"><i
+                                        class="fa-brands fa-github"></i></button>
+                            </a>
+                            <a href="https://wanderlodge-nxj2.onrender.com" target="_blank"> <button class="live">view
+                                    live
+                                </button></a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="projects advanced">
+                    <div class="img"><img src="Assets/github_clone.jpeg" alt=""></div>
+                    <div class="tech-detail">
+                        <div class="uses">
+                            <span>nodejs</span><span>javascript</span><span>CSS</span><span>yargs</span><span>reactjs</span><span>mongodb</span><span>jest</span><span>expressjs</span>
+                        </div>
+                        <h3>GitCloneHub</h3>
+                        <div class="time">Aug25-Sep25</div>
+                        <p>GitCloneHub is a GitHub-inspired platform that replicates core features like repository
+                            management, user authentication,
+                            and collaborative workflows, offering a simplified version for learning and development</p>
+                        <div class="viewLink"><a href="https://github.com/JaganParida/GitCloneHub"><button
+                                    class="view"><i class="fa-brands fa-github"></i></button></a>
+                            <a href=""><button class="live btn-disable">view
+                                    live</button></a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="projects advanced">
+                    <div class="img"><img src="Assets/spotify-ui.png" alt=""></div>
+                    <div class="tech-detail">
+                        <div class="uses">
+                            <span>HTML</span><span>CSS</span><span>Bootstrap</span><span>JS</span>
+                        </div>
+                        <h3>Spotify UI Clone</h3>
+                        <div class="time">Oct24-Nov24</div>
+                        <p>The Spotify Clone is a web-based music streaming application developed using HTML, CSS, and
+                            JavaScript. It allows users
+                            to search, play individual songs, or play all listed tracks, offering a seamless and
+                            engaging
+                            Spotify-like user
+                            experience.</p>
+                        <div class="viewLink">
+                            <a href="https://github.com/JaganParida/Spotify_clone" target="_blank"><button
+                                    class="view"><i class="fa-brands fa-github"></i>
+                                </button></a>
+                            <a href="https://jaganparida.github.io/Spotify_clone/" target="_blank"><button
+                                    class="live">view
+                                    live</button></a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="projects simple">
+                    <div class="img"><img src="Assets/amazon-ui.png" alt=""></div>
+                    <div class="tech-detail">
+                        <div class="uses">
+                            <span>HTML</span><span>CSS</span>
+                        </div>
+                        <h3>Amazon UI Clone</h3>
+                        <div class="time">Jul24-Aug24</div>
+                        <p>A simple and responsive Amazon homepage clone built using HTML & CSS. This project replicates
+                            the
+                            user interface of
+                            Amazon, focusing on the layout, design, and responsiveness to provide a seamless shopping
+                            experience.</p>
+                        <div class="viewLink">
+                            <a href="https://github.com/JaganParida/Amazon_UI_Clone" target="_blank"><button
+                                    class="view"><i class="fa-brands fa-github"></i></button></a>
+                            <a href="https://jaganparida.github.io/Amazon_UI_Clone/" target="_blank"><button
+                                    class="live">view
+                                    live</button></a>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="projects simple">
+                    <div class="img"><img src="Assets/simonsays.jpg" alt=""></div>
+                    <div class="tech-detail">
+                        <div class="uses">
+                            <span>HTML</span><span>CSS</span><span>JS</span>
+                        </div>
+                        <h3>Simon Says Game</h3>
+                        <div class="time">Oct24-Nov24</div>
+                        <p>Simon Says is a classic memory and reflex game where players follow commands only if prefixed
+                            with "Simon says."
+                            Ignoring or wrongly acting on instructions results in elimination. The game's difficulty
+                            increases progressively,
+                            challenging players' focus, speed, and accuracy.</p>
+                        <div class="viewLink"><a href="https://github.com/JaganParida/Simon_says_Game"
+                                target="_blank"><button class="view"><i class="fa-brands fa-github"></i></button></a> <a
+                                href="https://jaganparida.github.io/Simon_says_Game/" target="_blank"><button
+                                    class="live">view
+                                    live</button></a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="projects simple">
+                    <div class="img"><img src="Assets/calculator2.png" alt=""></div>
+                    <div class="tech-detail">
+                        <div class="uses">
+                            <span>HTML</span><span>CSS</span><span>JS</span>
+                        </div>
+                        <h3>Calculator&nbsp;</h3>
+                        <div class="time">Oct24-Nov24</div>
+                        <p>The Calculator is a simple, user-friendly web app built with HTML, CSS, and JavaScript. It
+                            performs basic arithmetic
+                            operations through a clean, responsive interface and now supports keyboard input for
+                            improved
+                            usability and convenience.</p>
+                        <div class="viewLink"><a href="https://github.com/JaganParida/Calculator"
+                                target="_blank"><button class="view"><i class="fa-brands fa-github"></i></button></a><a
+                                href="https://jaganparida.github.io/Calculator/" target="_blank"><button
+                                    class="live">view
+                                    live</button></a>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="projects simple">
+                    <div class="img"><img src="Assets/todo.jpg" alt=""></div>
+                    <div class="tech-detail">
+                        <div class="uses">
+                            <span>HTML</span><span>CSS</span><span>JS</span><span>LocalStorage API</span>
+                        </div>
+                        <h3>DailyChallenge Tracker</h3>
+                        <div class="time">Jul25-Aug25</div>
+                        <p>TaskWave is a responsive web app for managing tasks, tracking challenges, and staying on
+                            track
+                            with smart reminders.
+                            Add, edit, complete tasks, track progress, view history, and enjoy themes, notifications,
+                            and
+                            auto-saving for seamless
+                            management.
+                        </p>
+                        <div class="viewLink"><a href="https://github.com/JaganParida/Daily_TaskManager"
+                                target="_blank"><button class="view"><i class="fa-brands fa-github"></i></button></a><a
+                                href="https://jaganparida.github.io/Daily_TaskManager/" target="_blank"><button
+                                    class="live">view
+                                    live</button></a>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="projects simple">
+                    <div class="img"><img src="Assets/weather.png" alt=""></div>
+                    <div class="tech-detail">
+                        <div class="uses">
+                            <span>HTML</span><span>CSS</span><span>JS</span><span>React.js</span>
+                        </div>
+                        <h3>Weather website</h3>
+                        <div class="time">Dec24-Jan25</div>
+                        <p>This Weather App, built with React.js, HTML, CSS, and JavaScript, fetches real-time data via
+                            API.It shows temperature, humidity, wind speed, and forecasts, allowing users to search any
+                            city
+                            for instant, accurate, and user-friendly weather updates.</p>
+                        <div class="viewLink"><a href="https://github.com/JaganParida/Weather_App"
+                                target="_blank"><button class="view"><i class="fa-brands fa-github"></i></button></a>
+                            <a href="https://jaganparida.github.io/Weather_App/" target="_blank"><button
+                                    class="live">view
+                                    live</button></a>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="projects simple">
+                    <div class="img"><img src="Assets/tictactoe.jpg" alt=""></div>
+                    <div class="tech-detail">
+                        <div class="uses">
+                            <span>HTML</span><span>CSS</span><span>JS</span>
+                        </div>
+                        <h3>Tic Tac Toe Game</h3>
+                        <div class="time">Nov24-Dec24</div>
+                        <p>This Tic-Tac-Toe game, developed using HTML, CSS, and JavaScript, allows two players to
+                            alternate
+                            placing X and O on a
+                            3x3 grid. The player who first aligns three marks horizontally, vertically, or diagonally
+                            wins,
+                            otherwise the game ends
+                            in a draw.</p>
+                        <div class="viewLink"><a href="https://github.com/JaganParida/TicTacToe_Game"><button
+                                    class="view"><i class="fa-brands fa-github"></i></button></a>
+                            <a href="https://jaganparida.github.io/TicTacToe_Game/"><button class="live">view
+                                    live</button></a>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="projects advanced">
+                    <div class="img"><img src="Assets/working.png" alt=""></div>
+                    <div class="tech-detail">
+                        <div class="uses">
+                            <span>Tech</span><span>Teck</span><span>Tech</span>
+                        </div>
+                        <h3>Comming soon...</h3>
+                        <div class="time">Nov24-Dec24</div>
+                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Illum laboriosam, sequi odit illo
+                            cupiditate iure necessitatibus asperiores id temporibus placeat. Alias reprehenderit, ad eos
+                            deserunt maiores sint ratione tempore quis.</p>
+                        <div class="viewLink"><a href="#"><button class="view btn-disable"><i
+                                        class="fa-brands fa-github"></i></button></a>
+                            <a href="#"><button class="live btn-disable">view
+                                    live</button></a>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="projects advanced">
+                    <div class="img"><img src="Assets/working.png" alt=""></div>
+                    <div class="tech-detail">
+                        <div class="uses">
+                            <span>Tech</span><span>Tech</span><span>Tech</span>
+                        </div>
+                        <h3>Comming soon...</h3>
+                        <div class="time">Nov24-Dec24</div>
+                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Illum laboriosam, sequi odit illo
+                            cupiditate iure necessitatibus asperiores id temporibus placeat. Alias reprehenderit, ad eos
+                            deserunt maiores sint ratione tempore quis.</p>
+                        <div class="viewLink"><a href="#"><button class="view btn-disable"><i
+                                        class="fa-brands fa-github"></i></button></a>
+                            <a href="#"><button class="live btn-disable">view
+                                    live</button></a>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="projects advanced">
+                    <div class="img"><img src="Assets/working.png" alt=""></div>
+                    <div class="tech-detail">
+                        <div class="uses">
+                            <span>Tech</span><span>Tech</span><span>Tech</span>
+                        </div>
+                        <h3>Comming soon...</h3>
+                        <div class="time">Nov24-Dec24</div>
+                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Illum laboriosam, sequi odit illo
+                            cupiditate iure necessitatibus asperiores id temporibus placeat. Alias reprehenderit, ad eos
+                            deserunt maiores sint ratione tempore quis.</p>
+                        <div class="viewLink"><a href="#"><button class="view btn-disable"><i
+                                        class="fa-brands fa-github"></i></button></a>
+                            <a href="#"><button class="live btn-disable">view
+                                    live</button></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <h1 class="header" id="Cerifications">Cerifications</h1>
+        <div class="slideshow-container">
+            <div class="mySlides fade">
+                <div class="sliderCard">
+                    <div class="img">
+                        <img src="Assets/FullStack_Development_Completion_Certificate_page-0001.jpg" alt="">
+                    </div>
+                    <div class="info">
+                        <div class="certifyCompany">
+                            <img src="Assets/ApnaCollegeLogo.png" alt="">
+                            <h3>Apna College</h3>
+                        </div>
+                        <div class="time">Issued in Feb 2025</div>
+                        <p>Completed the Sigma 4.0 – Full Stack Web Development course from Apna College, gaining
+                            hands-on experience in frontend and
+                            backend technologies like HTML, CSS, JavaScript, MERN Stack. This
+                            certification showcases my full-stack
+                            development skills and commitment to growth.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="mySlides fade">
+                <div class="sliderCard">
+                    <div class="img">
+                        <img src="Assets/deloite.jpg" alt="">
+                    </div>
+                    <div class="info">
+                        <div class="certifyCompany">
+                            <img src="Assets/Deloitte-logo.png" alt="">
+                            <h3>Deloitte</h3>
+                        </div>
+                        <div class="time">Issued in Jul 2025</div>
+                        <p>Completed the Deloitte Data Analytics Job Simulation, gaining hands-on experience in data
+                            analysis and forensic
+                            technology. This certification highlights my analytical problem-solving skills and
+                            commitment to practical learning in
+                            real-world business scenarios.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="mySlides fade">
+                <div class="sliderCard">
+                    <div class="img"><img src="Assets/NPTEL_Qualify_Certificate_page-0001.jpg" alt=""></div>
+                    <div class="info">
+                        <div class="certifyCompany">
+                            <img src="Assets/nptel-logo.png" alt="">
+                            <h3>NPTEL</h3>
+                        </div>
+                        <div class="time">Issued in Apr 2025</div>
+                        <p>Earned an Elite NPTEL certification for completing the "Python for Data Science" course
+                            by
+                            IIT Madras. Scored 73%
+                            through rigorous assignments and a proctored exam. This 4-week program strengthened my
+                            foundations in Python and its
+                            application in data science workflows.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="mySlides fade">
+                <div class="sliderCard">
+                    <div class="img"><img src="Assets/WebDesign_and_WebDevelopment_Certificate_page-0001.jpg" alt="">
+                    </div>
+                    <div class="info">
+                        <div class="certifyCompany">
+                            <img src="Assets/linkedin-learning-seeklogo.png" alt="">
+                            <h3>Linkedin Learing</h3>
+                        </div>
+                        <div class="time">Issued in Apr 2025</div>
+                        <p>Completed the “Introduction to Web Design and Development” course on LinkedIn Learning,
+                            covering core concepts of HTML,
+                            web design principles, and basic development practices. This course helped reinforce my
+                            understanding of web structure
+                            and responsive design fundamentals.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="mySlides fade">
+                <div class="sliderCard">
+                    <div class="img"><img src="Assets/Hack2skill-Certificate.png" alt="">
+                    </div>
+                    <div class="info">
+                        <div class="certifyCompany">
+                            <img src="Assets/google_cloud_logo.png" alt="">
+                            <h3>Google Cloud</h3>
+                        </div>
+                        <div class="time">Issued in Jul 2025</div>
+                        <p>Completed the Gen AI Academy program by Google Cloud and H2S, gaining foundational
+                            knowledge
+                            and practical expertise in
+                            Generative AI through hands-on experience with tools and platforms like Vertex AI,
+                            Gemini
+                            APIs, Imagen, Streamlit, and
+                            Multimodal RAG. This certification highlights my industry-relevant AI skills and
+                            dedication
+                            to advancing in the field of
+                            Artificial Intelligence.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="mySlides fade">
+                <div class="sliderCard">
+                    <div class="img"><img src="Assets/javascript_course_compleetion_page-0001.jpg" alt=""></div>
+                    <div class="info">
+                        <div class="certifyCompany">
+                            <img src="Assets/GeeksForGeeks_logo.png" alt="">
+                            <h3>GeeksforGeeks</h3>
+                        </div>
+                        <div class="time">Issued in Jun 2025</div>
+                        <p>Completed an 8-week JavaScript Full Course from GeeksforGeeks, covering key programming
+                            concepts such as variables,
+                            functions, DOM manipulation, and asynchronous operations. This certification solidified
+                            my
+                            JavaScript foundation and
+                            improved my ability to build interactive web applications.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="mySlides fade">
+                <div class="sliderCard">
+                    <div class="img"><img src="Assets/javascript_basic certificate_page-0001.jpg" alt=""></div>
+                    <div class="info">
+                        <div class="certifyCompany">
+                            <img src="Assets/HackerRank_Icon-1000px.png" alt="">
+                            <h3>HackerRank</h3>
+                        </div>
+                        <div class="time">Issued in Jun 2025</div>
+                        <p>Successfully cleared the HackerRank JavaScript (Basic) Skill Certification, demonstrating
+                            core proficiency in JavaScript
+                            fundamentals including syntax, control structures, and basic problem-solving. This
+                            certification reflects my readiness
+                            for real-world coding assessments and technical interviews.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="mySlides fade">
+                <div class="sliderCard">
+                    <div class="img"><img src="Assets/awsPractitioner.jpg" alt=""></div>
+                    <div class="info">
+                        <div class="certifyCompany">
+                            <img src="Assets/linkedin-learning-seeklogo.png" alt="">
+                            <h3>Linkedin Learing</h3>
+                        </div>
+                        <div class="time">Issued in Mar 2025</div>
+                        <p>Completed the “AWS Certified Cloud Practitioner (CLF-C02) – Cloud Concepts” course on
+                            LinkedIn Learning. Gained
+                            foundational knowledge of AWS services, core cloud concepts, and the principles of cloud
+                            computing. This certification
+                            strengthens my understanding of cloud infrastructure and prepares me for further AWS
+                            certifications.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="mySlides fade">
+                <div class="sliderCard">
+                    <div class="img"><img src="Assets/Certificate(Prodigy infotech)_page-0001.jpg" alt=""></div>
+                    <div class="info">
+                        <div class="certifyCompany">
+                            <img src="Assets/prodigy_logo.png" alt="">
+                            <h3>Prodigy Infotech</h3>
+                        </div>
+                        <div class="time">Issued in Apr 2025</div>
+                        <p>Completed a 1-month web development internship at Prodigy InfoTech from March 15 to April
+                            15,
+                            2025. Gained practical
+                            experience in building responsive web applications and was recognized with outstanding
+                            remarks for performance and
+                            contribution during the internship.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <a class="prev" onclick="plusSlides(-1)"><svg width="6.75" height="12" fill="none"
+                    class="_aj3i _agnt _adid _arcp _afbl">
+                    <path fill-rule="evenodd" clip-rule="evenodd"
+                        d="M.22922.22922c.30563-.30563.80115-.30563 1.10678 0l5.21739 5.21739c.30562.30563.30562.80115 0 1.10678L1.336 11.7708c-.30563.3056-.80115.3056-1.10678 0-.30563-.3056-.30563-.8012 0-1.1068L4.89322 6l-4.664-4.664c-.30563-.30563-.30563-.80115 0-1.10678Z"
+                        fill="currentColor"></path>
+                </svg></a>
+            <a class="next" onclick="plusSlides(1)"><svg width="6.75" height="12" fill="none"
+                    class="_aj3i _agnt _adid _arcp _afbl">
+                    <path fill-rule="evenodd" clip-rule="evenodd"
+                        d="M.22922.22922c.30563-.30563.80115-.30563 1.10678 0l5.21739 5.21739c.30562.30563.30562.80115 0 1.10678L1.336 11.7708c-.30563.3056-.80115.3056-1.10678 0-.30563-.3056-.30563-.8012 0-1.1068L4.89322 6l-4.664-4.664c-.30563-.30563-.30563-.80115 0-1.10678Z"
+                        fill="currentColor"></path>
+                </svg></a>
+        </div>
+        <div class="slider-dots" id="dots-container"></div>
+
+        <h1 id="contacts_headerline">Let's <span>talk</span></h1>
+        <p id="contact_p"><i class="fa-regular fa-paper-plane"></i> If you have any inquiries or just want to say
+            hi,
+            please use the contact form <i class="fa-solid fa-envelope"></i>!</p>
+        <div id="page5">
+            <div class="contact">
+
+                <div id="contact">
+                    <p>I'd like to hear from you <i class="fa-solid fa-face-smile" style="color: #7142ff;"></i></p>
+                    <form action="https://api.web3forms.com/submit" method="POST">
+                        <input type="hidden" name="access_key" value="30e48d28-8ced-46de-a1a4-95ea3c27c7fd">
+                        <input class="name" type="text" name="name" required placeholder="Your Name">
+                        <input type="email" name="email" required placeholder="What's your email?">
+                        <input type="text" name="subject" required placeholder="Subjcet" />
+                        <textarea class="message" name="message" required
+                            placeholder="Message me for any suggetion"></textarea>
+                        <div class="Contactbtn"><button><i class="fa-solid fa-paper-plane"></i>Send
+                                Message</button>
+                        </div>
+                    </form>
+                </div>
+                <img src="Assets/contact_illustrration.png" alt="">
+            </div>
+        </div>
+    </section>
+
+
+    <footer>
+        <div>@Jagan Parida</div>
+        <div class="link">
+            <a class="linkedin" href="https://www.linkedin.com/in/jagan-parida-7439002a0" target="#"><i
+                    class="fa-brands fa-linkedin"></i></a>
+            <a class="instagram" href="https://www.instagram.com/jaganparidaa/profilecard/?igsh=MWN5MmZuYm42dHV4YQ=="
+                target="#"><i class="fa-brands fa-instagram"></i></a>
+            <a class="twitter" href="https://x.com/JaganParida0504?t=8bIfF9ByM8BJbc5Gux6pHA&s=09" target="#"><i
+                    class="fa-brands fa-x-twitter"></i></a>
+            <a class="facebook" href="https://www.facebook.com/share/1Ed869N3Z6/" target="#"><i
+                    class="fa-brands fa-facebook"></i></a>
+            <a class="github" href="https://github.com/JaganParida"><i class="fa-brands fa-github"></i></a>
+        </div>
+        <div>
+            &copy;2024 Jagan . All rights reserved.
+        </div>
+    </footer>
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+    <script src="app.js" defer></script>
+    <script src="vanila-till.js"></script>
+</body>
+
 </html>
