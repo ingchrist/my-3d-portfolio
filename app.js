@@ -225,3 +225,26 @@ for (let i = 0; i < btns.length; i++) {
     this.classList.add("active");
   });
 }
+
+/* Contact form — inject Web3Forms key at runtime from config.js */
+(function () {
+  const form = document.getElementById("contactForm");
+  if (!form) return;
+
+  const key = window.WEB3FORMS_KEY;
+  if (key) {
+    const hidden = document.createElement("input");
+    hidden.type = "hidden";
+    hidden.name = "access_key";
+    hidden.value = key;
+    form.prepend(hidden);
+  } else {
+    // Key not configured: disable submit and warn in console
+    const btn = form.querySelector("button[type=submit]");
+    if (btn) btn.disabled = true;
+    console.warn(
+      "Contact form disabled: WEB3FORMS_KEY is not set. " +
+      "Create config.js with window.WEB3FORMS_KEY = 'your-key' or set it via Vercel."
+    );
+  }
+})();

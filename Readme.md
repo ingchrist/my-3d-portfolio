@@ -21,6 +21,27 @@ If you have any queries, collaboration ideas, or professional opportunities, fee
 - 🔗 LinkedIn: [LinkedIn](https://www.linkedin.com/in/christiandjinguet/)
 - 🐦 Twitter: [twitter](https://x.com/IngChrist)
 
-##
+## ⚙️ Local Setup
+
+```bash
+# 1. Copy the config template
+cp config.js.example config.js
+
+# 2. Replace the placeholder with your real Web3Forms key
+#    Get a free key at https://web3forms.com
+#    Edit config.js:  window.WEB3FORMS_KEY = 'your-real-key';
+
+# 3. Serve locally
+npx serve .
+```
+
+> `config.js` is gitignored — your key is never committed.
+
+## 🚀 Vercel Deployment
+
+1. Go to your Vercel project → **Settings → Environment Variables**
+2. Add `WEB3FORMS_KEY` = `your-real-key`
+3. Redeploy — `vercel.json` runs `echo "window.WEB3FORMS_KEY='$WEB3FORMS_KEY';" > config.js` at build time
+
 
 Thank you for visiting my portfolio! 🚀

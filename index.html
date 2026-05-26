@@ -687,15 +687,13 @@
 
                 <div id="contact">
                     <p>I'd like to hear from you <i class="fa-solid fa-face-smile" style="color: #7142ff;"></i></p>
-                    <form action="https://api.web3forms.com/submit" method="POST">
-                        <!-- Web3Forms access key: set via Vercel environment or your deployment config -->
-                        <input type="hidden" name="access_key" value="YOUR_WEB3FORMS_ACCESS_KEY">
+                    <form id="contactForm" action="https://api.web3forms.com/submit" method="POST">
                         <input class="name" type="text" name="name" required placeholder="Your Name">
                         <input type="email" name="email" required placeholder="What's your email?">
                         <input type="text" name="subject" required placeholder="Subject" />
                         <textarea class="message" name="message" required
                             placeholder="Message me for any suggestion"></textarea>
-                        <div class="Contactbtn"><button><i class="fa-solid fa-paper-plane"></i>Send
+                        <div class="Contactbtn"><button type="submit"><i class="fa-solid fa-paper-plane"></i>Send
                                 Message</button>
                         </div>
                     </form>
@@ -723,6 +721,7 @@
             &copy;2024 ingchrist . All rights reserved.
         </div>
     </footer>
+    <script src="config.js"></script>
     <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
     <script src="app.js" defer></script>
     <script src="vanila-till.js"></script>
