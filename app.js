@@ -227,7 +227,7 @@ for (let i = 0; i < btns.length; i++) {
 }
 
 /* Contact form — inject Web3Forms key at runtime from config.js */
-(function () {
+function initContactForm() {
   const form = document.getElementById("contactForm");
   if (!form) return;
 
@@ -239,7 +239,6 @@ for (let i = 0; i < btns.length; i++) {
     hidden.value = key;
     form.prepend(hidden);
   } else {
-    // Key not configured: disable submit and warn in console
     const btn = form.querySelector("button[type=submit]");
     if (btn) btn.disabled = true;
     console.warn(
@@ -247,4 +246,12 @@ for (let i = 0; i < btns.length; i++) {
       "Create config.js with window.WEB3FORMS_KEY = 'your-key' or set it via Vercel."
     );
   }
-})();
+}
+// Wait up to 2s for config.js to set the key, then initialise the form
+(function waitForConfig(attempts) {
+  if (window.WEB3FORMS_KEY || attempts <= 0) {
+    initContactForm();
+  } else {
+    setTimeout(function() { waitForConfig(attempts - 1); }, 100);
+  }
+})(20);

@@ -721,7 +721,16 @@
             &copy;2024 ingchrist . All rights reserved.
         </div>
     </footer>
-    <script src="config.js"></script>
+    <script>
+      // Load config.js silently; if missing, WEB3FORMS_KEY stays undefined
+      // and app.js will disable the contact form gracefully.
+      (function() {
+        var s = document.createElement('script');
+        s.src = 'config.js';
+        s.onerror = function() {}; // suppress 404 console error
+        document.head.appendChild(s);
+      })();
+    </script>
     <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
     <script src="app.js" defer></script>
     <script src="vanila-till.js"></script>
