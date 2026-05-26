@@ -18,7 +18,7 @@ I am a passionate **Computer Science Engineering (CSE) student** with a strong i
 If you have any queries, collaboration ideas, or professional opportunities, feel free to reach out!
 
 - 📧 Email: cdjinguet@gmail.com
-- 🔗 LinkedIn: [linkedin](https://www.linkedin.com/in/christiandjinguet/)
+- 🔗 LinkedIn: [LinkedIn](https://www.linkedin.com/in/christiandjinguet/)
 - 🐦 Twitter: [twitter](https://x.com/IngChrist)
 
 ##

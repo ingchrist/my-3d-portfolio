@@ -3,6 +3,8 @@
   padding: 0;
   box-sizing: border-box;
   font-family: "Poppins", sans-serif;
+}
+button, .menuicon, .btn, .dot, .prev, .next, header {
   user-select: none;
 }
 
@@ -152,7 +154,6 @@ header a:hover {
   color: var(--font-primary-color);
   font-family: "Lobster", sans-serif;
   font-weight: 200;
-  color: var(--font-primary-color);
   font-size: 30px;
 }
 .navlist nav {
@@ -699,9 +700,6 @@ div .check {
 }
 .projects {
   display: none;
-}
-.projects {
-  display: none;
   flex-direction: column;
   gap: 5px;
   flex-basis: 320px;
@@ -843,13 +841,12 @@ div .check {
 .projects .viewLink .btn-disable {
   cursor: not-allowed;
 }
-#filterButton {
+#myBtnContainer {
   display: flex;
   gap: 15px;
 }
-#filterButton .btn {
+#myBtnContainer .btn {
   padding: 8px 16px;
-  border: none;
   border-radius: 8px;
   border: 1px solid var(--font-primary-color);
   background-color: var(--bg-color);
@@ -998,7 +995,7 @@ div .check {
   align-items: center;
   justify-content: center;
   transition: background 0.3s ease;
-  box-shadow: 1px -2px 10px var(--);
+  box-shadow: 1px -2px 10px var(--font-primary-color);
 }
 .prev:hover,
 .next:hover {

@@ -139,7 +139,6 @@ document.addEventListener("DOMContentLoaded", () => {
 let mybutton = document.getElementById("myBtn");
 window.onscroll = function () {
   scrollFunctionBottom();
-  scrollFunctionTop();
 };
 function scrollFunctionBottom() {
   if (
@@ -210,7 +209,7 @@ function filterSelection(category, event) {
       projects[i].classList.add("show");
     }
   }
-  const buttons = document.querySelectorAll("#filterButton .btn");
+  const buttons = document.querySelectorAll("#myBtnContainer .btn");
   buttons.forEach((btn) => btn.classList.remove("active"));
 
   if (event) {

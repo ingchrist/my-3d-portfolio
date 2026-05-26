@@ -1,7 +1,6 @@
 "use strict";
 const { requestAnimationFrame, cancelAnimationFrame } = window;
 const isSettingTrue = (val) => val === "" || val === true;
-const SETTLE_TIMEOUT = 300;
 const SETTINGS = {
   reverse: false,
   max: 15,
@@ -28,7 +27,7 @@ const SETTINGS = {
 };
 class VanillaTilt {
   constructor(element, settings = {}) {
-    if (!(element instanceof Node)) throw "Can't initialize VanillaTilt because " + element + " is not a Node.";
+    if (!(element instanceof Node)) throw new Error("Can't initialize VanillaTilt because " + element + " is not a Node.");
     this.width = null; this.height = null; this.clientWidth = null; this.clientHeight = null;
     this.left = null; this.top = null;
     this.gammazero = null; this.betagero = null;
@@ -110,7 +109,7 @@ class VanillaTilt {
     return this.element;
   }
   onDeviceOrientation(e) {
-    if (!e.gamma || !e.beta) return;
+    if (e.gamma == null || e.beta == null) return;
     this.updateElementPosition();
     if (this.gyroscopeSamples > 0) {
       this.lastGamez = (this.lastGamez || e.gamma);
@@ -201,7 +200,7 @@ class VanillaTilt {
     jsTiltGlareInnerStyle.pointerEvents = "none";
     jsTiltGlareInnerStyle.backgroundImage = `linear-gradient(0deg, rgba(255,255,255,0) 0%, rgba(255,255,255,1) 100%)`;
     jsTiltGlareInnerStyle.width = `${this.element.offsetWidth * 2}px`;
-    jsTiltGlareInnerStyle.height = `${this.element.offsetWidth * 2}px`;
+    jsTiltGlareInnerStyle.height = `${this.element.offsetHeight * 2}px`;
     jsTiltGlareInnerStyle.transform = "rotate(180deg) translate(-50%, -50%)";
     jsTiltGlareInnerStyle.transformOrigin = "0% 0%"; jsTiltGlareInnerStyle.opacity = "0";
   }
@@ -232,7 +231,15 @@ class VanillaTilt {
     if (!(elements instanceof Array)) return;
     elements.forEach((el) => { if (!("vanillaTilt" in el)) { el.vanillaTilt = new VanillaTilt(el, settings); } });
   }
-  onWindowResize() { this.updateElementPosition(); if (this.glare) this.prepareGlare(); }
+  onWindowResize() {
+    this.updateElementPosition();
+    if (this.glare) {
+      const existing = this.element.querySelector(".js-tilt-glare");
+      if (existing) existing.remove();
+      this.prepareGlare();
+      this.glareElement = this.element.querySelector(".js-tilt-glare-inner");
+    }
+  }
   setSize() { this.clientWidth = window.innerWidth || document.documentElement.clientWidth; this.clientHeight = window.innerHeight || document.documentElement.clientHeight; }
 }
 if (typeof document !== "undefined") {
