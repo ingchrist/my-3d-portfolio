@@ -855,11 +855,11 @@ div .check {
   margin: 0 5px;
   transition: background-color 0.3s;
 }
-#filterButton .btn.active {
+#myBtnContainer .btn.active {
   border-bottom: 4px solid var(--proficiency-bgColor1);
 }
 
-#filterButton button:hover {
+#myBtnContainer button:hover {
   background-color: var(--skillBar-bgColor);
   color: var(--projects-viewLink);
 }
