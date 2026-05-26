@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "buildCommand": "echo \"window.WEB3FORMS_KEY='$WEB3FORMS_KEY';\" > config.js",
+  "outputDirectory": ".",
+  "routes": [
+    {
+      "src": "/(.*)",
+      "dest": "/index.html"
+    }
+  ]
+}

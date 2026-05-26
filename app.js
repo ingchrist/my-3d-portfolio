@@ -1,0 +1,250 @@
+const toggle = document.getElementById("toggleDark");
+const html = document.documentElement;
+
+// Check for saved preference in localStorage
+if (localStorage.getItem("mode") === "dark") {
+  html.classList.add("theme-dark");
+  toggle.classList.remove("bi-brightness-high-fill");
+  toggle.classList.add("bi-moon");
+}
+toggle.addEventListener("click", function () {
+  const isDark = html.classList.toggle("theme-dark");
+  if (isDark) {
+    this.classList.remove("bi-brightness-high-fill");
+    this.classList.add("bi-moon");
+    localStorage.setItem("mode", "dark");
+  } else {
+    this.classList.remove("bi-moon");
+    this.classList.add("bi-brightness-high-fill");
+    localStorage.setItem("mode", "light");
+  }
+});
+
+//type-writer
+var typed = new Typed(".auto-type", {
+  strings: [
+    "CSE Student",
+    "Problem Solver",
+    "UI Designer",
+    "Programmer",
+    "Fullstack Developer",
+  ],
+  typeSpeed: 100,
+  backSpeed: 100,
+  loop: true,
+});
+
+/*menuicon and nav-list */
+function myFunction(x) {
+  x.classList.toggle("change");
+}
+let menuicon = document.querySelector(".menuicon");
+let navlist = document.querySelector(".navlist");
+menuicon.addEventListener("click", () => {
+  navlist.classList.toggle("hide");
+});
+const navItems = document.querySelectorAll(".navItem");
+const mediaQuery = window.matchMedia("(max-width: 768px)");
+function applyNavHighlighting(media) {
+  if (media.matches) {
+    navItems.forEach((el) => {
+      el.addEventListener("click", () => {
+        navItems.forEach((item) => (item.style.backgroundColor = ""));
+        el.style.backgroundColor = "#644cff";
+      });
+    });
+  } else {
+    navItems.forEach((item) => (item.style.backgroundColor = ""));
+  }
+}
+applyNavHighlighting(mediaQuery);
+mediaQuery.addEventListener("change", applyNavHighlighting);
+
+/*Preloader*/
+let preloader = document.querySelector("#Preloader");
+window.addEventListener("load", () => {
+  preloader.style.display = "none";
+});
+
+// timeline
+document.addEventListener("DOMContentLoaded", () => {
+  const timelineContainer = document.querySelector(".timeline-items");
+  const line = document.createElement("div");
+  line.classList.add("timeline-scroll-line");
+  timelineContainer.appendChild(line);
+  function updateLinePosition() {
+    if (window.innerWidth <= 765) {
+      line.style.left = "7px";
+    } else {
+      line.style.left = "calc(50% - 1px)";
+    }
+  }
+  updateLinePosition();
+  window.addEventListener("resize", updateLinePosition);
+  let lastScrollY = window.scrollY;
+  function animateLine() {
+    const containerTop =
+      timelineContainer.getBoundingClientRect().top + window.scrollY;
+    const containerHeight = timelineContainer.offsetHeight;
+    const scrollY = window.scrollY;
+    const windowHeight = window.innerHeight;
+    const scrollCenter = scrollY + windowHeight / 2;
+    const distanceIntoTimeline = scrollCenter - containerTop;
+    let percentage = (distanceIntoTimeline / containerHeight) * 100;
+    percentage = Math.max(0, Math.min(percentage, 100));
+    line.style.transition = "height 0.2s ease-out";
+    line.style.height = `${percentage}%`;
+    lastScrollY = scrollY;
+    requestAnimationFrame(animateLine);
+  }
+  animateLine();
+});
+
+//animate-on-scroll
+document.addEventListener("DOMContentLoaded", () => {
+  const handleIntersect = (threshold) => {
+    return new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("visible");
+          } else {
+            entry.target.classList.remove("visible");
+          }
+        });
+      },
+      { threshold }
+    );
+  };
+  const skillsObserver = handleIntersect(0.4);
+  document.querySelectorAll("#skill-list, .first, .second").forEach((el) => {
+    skillsObserver.observe(el);
+  });
+  const projectsObserver = handleIntersect(0.2);
+  document.querySelectorAll(".projects, .project").forEach((project) => {
+    projectsObserver.observe(project);
+  });
+  const resumeObserver = handleIntersect(0.3);
+  document.querySelectorAll(".resume").forEach((btn) => {
+    resumeObserver.observe(btn);
+  });
+  const proficiencyObserver = handleIntersect(0.3);
+  const proficiencyEl = document.querySelector(".proficiency-container");
+  if (proficiencyEl) {
+    proficiencyObserver.observe(proficiencyEl);
+  }
+});
+
+/*go-to-top-button*/
+let mybutton = document.getElementById("myBtn");
+window.onscroll = function () {
+  scrollFunctionBottom();
+};
+function scrollFunctionBottom() {
+  if (
+    document.body.scrollTop > 150 ||
+    document.documentElement.scrollTop > 150
+  ) {
+    mybutton.style.display = "block";
+  } else {
+    mybutton.style.display = "none";
+  }
+}
+function topFunction() {
+  document.documentElement.scrollTop = 0;
+}
+
+//slider
+let slideIndex = 0;
+let timer;
+function showSlides(indexChange = 0) {
+  clearTimeout(timer);
+  const slides = document.querySelectorAll(".mySlides");
+  const dotsContainer = document.getElementById("dots-container");
+  if (dotsContainer.children.length === 0) {
+    slides.forEach((_, i) => {
+      const dot = document.createElement("span");
+      dot.classList.add("dot");
+      dot.addEventListener("click", () => moveToSlide(i));
+      dotsContainer.appendChild(dot);
+    });
+  }
+  slideIndex += indexChange;
+  if (slideIndex >= slides.length) slideIndex = 0;
+  if (slideIndex < 0) slideIndex = slides.length - 1;
+  slides.forEach((slide, i) => {
+    slide.classList.remove("slide-in");
+    slide.style.display = "none";
+    dotsContainer.children[i].classList.remove("active");
+    dotsContainer.children[i].innerHTML = "";
+  });
+  slides[slideIndex].style.display = "block";
+  slides[slideIndex].classList.add("slide-in");
+  const activeDot = dotsContainer.children[slideIndex];
+  activeDot.classList.add("active");
+  const fillDiv = document.createElement("div");
+  fillDiv.classList.add("fill");
+  activeDot.appendChild(fillDiv);
+  timer = setTimeout(() => showSlides(1), 2000);
+}
+function plusSlides(n) {
+  showSlides(n);
+}
+function moveToSlide(n) {
+  slideIndex = n - 1;
+  showSlides(1);
+}
+window.onload = () => {
+  showSlides();
+};
+
+// Default filter: show all
+filterSelection("all");
+function filterSelection(category, event) {
+  const projects = document.getElementsByClassName("projects");
+  for (let i = 0; i < projects.length; i++) {
+    projects[i].classList.remove("show");
+
+    if (category === "all" || projects[i].classList.contains(category)) {
+      projects[i].classList.add("show");
+    }
+  }
+  const buttons = document.querySelectorAll("#myBtnContainer .btn");
+  buttons.forEach((btn) => btn.classList.remove("active"));
+
+  if (event) {
+    event.currentTarget.classList.add("active");
+  }
+}
+const btnContainer = document.getElementById("myBtnContainer");
+const btns = btnContainer.getElementsByClassName("btn");
+for (let i = 0; i < btns.length; i++) {
+  btns[i].addEventListener("click", function () {
+    const current = btnContainer.querySelector(".active");
+    if (current) current.classList.remove("active");
+    this.classList.add("active");
+  });
+}
+
+/* Contact form — inject Web3Forms key at runtime from config.js */
+(function () {
+  const form = document.getElementById("contactForm");
+  if (!form) return;
+
+  const key = window.WEB3FORMS_KEY;
+  if (key) {
+    const hidden = document.createElement("input");
+    hidden.type = "hidden";
+    hidden.name = "access_key";
+    hidden.value = key;
+    form.prepend(hidden);
+  } else {
+    // Key not configured: disable submit and warn in console
+    const btn = form.querySelector("button[type=submit]");
+    if (btn) btn.disabled = true;
+    console.warn(
+      "Contact form disabled: WEB3FORMS_KEY is not set. " +
+      "Create config.js with window.WEB3FORMS_KEY = 'your-key' or set it via Vercel."
+    );
+  }
+})();

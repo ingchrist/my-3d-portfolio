@@ -1,0 +1,5 @@
+// Copy this file to config.js and fill in your real key.
+// config.js is gitignored — never commit the real key.
+// On Vercel: set WEB3FORMS_KEY in Environment Variables and add a build command:
+//   echo "window.WEB3FORMS_KEY='$WEB3FORMS_KEY';" > config.js
+window.WEB3FORMS_KEY = "YOUR_WEB3FORMS_ACCESS_KEY";
