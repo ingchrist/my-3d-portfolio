@@ -17,9 +17,9 @@ I am a passionate **Computer Science Engineering (CSE) student** with a strong i
 
 If you have any queries, collaboration ideas, or professional opportunities, feel free to reach out!
 
-- 📧 Email: jaganparida39064@gmail.com
-- 🔗 LinkedIn: [linkedin](https://www.linkedin.com/in/jagan-parida-7439002a0)
-- 🐦 Twitter: [twitter](https://x.com/JaganParida0504?t=8bIfF9ByM8BJbc5Gux6pHA&s=09)
+- 📧 Email: cdjinguet@gmail.com
+- 🔗 LinkedIn: [linkedin](https://www.linkedin.com/in/christiandjinguet/)
+- 🐦 Twitter: [twitter](https://x.com/IngChrist)
 
 ##
 
