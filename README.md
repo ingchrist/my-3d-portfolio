@@ -94,3 +94,23 @@ npm run dev
 ```
 
 Open [http://localhost:5173](http://localhost:5173/) in your browser to view the project.
+
+## 🚀 Deployment (Vercel)
+
+This project is configured for one-click deployment on [Vercel](https://vercel.com).
+
+**Steps:**
+
+1. Push your code to GitHub (already done on the `development` branch)
+2. Go to [vercel.com](https://vercel.com) → **Add New Project** → import `my-3d-portfolio`
+3. Vercel will auto-detect Vite. Use these settings:
+   - **Framework Preset:** Vite
+   - **Build Command:** `npm run build`
+   - **Output Directory:** `dist`
+4. Add your environment variables under **Settings → Environment Variables**:
+   ```
+   VITE_APP_EMAILJS_SERVICE_ID
+   VITE_APP_EMAILJS_TEMPLATE_ID
+   VITE_APP_EMAILJS_PUBLIC_KEY
+   ```
+5. Click **Deploy** — you're live!
