@@ -1,0 +1,14 @@
+{
+  "version": 2,
+  "buildCommand": "echo \"window.WEB3FORMS_KEY='$WEB3FORMS_KEY';\" > config.js",
+  "outputDirectory": ".",
+  "routes": [
+    { "src": "/Assets/(.*)", "dest": "/Assets/$1" },
+    { "src": "/style.css", "dest": "/style.css" },
+    { "src": "/app.js", "dest": "/app.js" },
+    { "src": "/vanila-till.js", "dest": "/vanila-till.js" },
+    { "src": "/config.js", "dest": "/config.js" },
+    { "src": "/favicon.ico", "dest": "/Assets/favicon.png" },
+    { "src": "/(.*)", "dest": "/index.html" }
+  ]
+}
