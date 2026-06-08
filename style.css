@@ -569,6 +569,10 @@ div .check {
   width: 90%;
   animation-delay: 0.3s;
 }
+.skill-per.wordpress {
+  width: 90%;
+  animation-delay: 0.4s;
+}
 .skill-per .tooltip {
   position: absolute;
   right: -14px;
