@@ -872,6 +872,57 @@ div .check {
   flex-direction: column;
 }
 
+/* ── WordPress Section ─────────────────────────────────── */
+.wp-section-header {
+  font-size: 52px;
+  font-weight: 700;
+  background: linear-gradient(135deg, var(--proficiency-bgColor1), var(--proficiency-bgColor2), #00bdff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  letter-spacing: -0.5px;
+  line-height: 1.15;
+  padding-bottom: 6px;
+}
+.wp-section-tagline {
+  text-align: center;
+  font-size: 1rem;
+  color: var(--projects-p);
+  margin-top: -10px;
+  margin-bottom: 10px;
+  font-style: italic;
+  letter-spacing: 0.3px;
+  animation: appear 5s linear;
+  animation-timeline: view();
+  animation-range: entry 0% cover 40%;
+}
+#page-wp {
+  display: flex;
+  flex-direction: column;
+}
+#wp-project-list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 100%;
+}
+.wp-project {
+  position: relative;
+}
+.wp-project::before {
+  content: "\f19a";
+  font-family: "Font Awesome 6 Brands";
+  position: absolute;
+  top: 12px;
+  right: 14px;
+  font-size: 22px;
+  color: var(--proficiency-bgColor1);
+  opacity: 0.7;
+  z-index: 2;
+  pointer-events: none;
+}
+
 /*certification*/
 /* Slideshow Container */
 .slideshow-container {
@@ -1445,6 +1496,13 @@ footer div {
   /*Skills*/
   .header {
     font-size: 40px;
+  }
+  .wp-section-header {
+    font-size: 34px;
+  }
+  .wp-section-tagline {
+    font-size: 0.88rem;
+    padding: 0 16px;
   }
   #skill-list {
     display: flex;
